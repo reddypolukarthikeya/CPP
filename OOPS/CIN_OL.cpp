@@ -1,11 +1,5 @@
 #include <iostream>
 
-using std::cout;
-using std::endl;
-using std::cin;
-using std::istream;
-using std::ostream;
-
 class complex
 {
     public :
@@ -18,9 +12,10 @@ class complex
             img = i;
         }
         friend complex operator+(complex c1, complex c2);
-        friend ostream & operator<<(ostream &out,complex &c);
-        friend istream & operator>>(istream &in,complex &c);
+        friend std::ostream & operator<<(std::ostream &out,complex &c);
+        friend std::istream & operator>>(std::istream &in,complex &c);
 };
+
 complex operator+(complex c1, complex c2)
 {
         complex temp;
@@ -28,12 +23,14 @@ complex operator+(complex c1, complex c2)
         temp.img = c1.img + c2.img;
         return temp;
 }
-ostream & operator<<(ostream &out,complex &c)
+
+std::ostream & operator<<(std::ostream &out,complex &c)
 {
-    out << c.real << " + i " << c.img << endl;
+    out << c.real << " + i " << c.img << std::endl;
     return out;
 }
-istream & operator>>(istream &in,complex &c)
+
+std::istream & operator>>(std::istream &in,complex &c)
 {
     in >> c.real >> c.img;
     return in;
@@ -42,7 +39,7 @@ istream & operator>>(istream &in,complex &c)
 int main ()
 { 
     complex c1,c2,c3;
-    cin >> c1 >> c2;
+    std::cin >> c1 >> c2;
     c3 = c1 + c2;
-    cout << c3 << endl;
+    std::cout << c3 << std::endl;
 }
