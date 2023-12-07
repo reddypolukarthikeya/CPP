@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 class animal
 {
     private:
@@ -11,7 +11,7 @@ class animal
         }
         void seta(int k) 
         { 
-            a= k; 
+            a = k; 
         }
         int geta() 
         { 
@@ -23,5 +23,5 @@ int main ()
 {
     animal a1;
     a1.seta(1);
-    cout << a1.geta;
+    std::cout << a1.geta();
 }
