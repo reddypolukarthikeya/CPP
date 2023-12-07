@@ -1,14 +1,11 @@
 #include <iostream>
 
-using std::cout;
-using std::endl;
-
 class base 
 {
     public:
        base ()
        {
-           cout << "From base default" << endl;
+           std::cout << "From base default" << std::endl;
        }
 };
 class derived : public base 
@@ -16,7 +13,7 @@ class derived : public base
     public :
        derived ()
        {
-           cout << "From derived default" << endl;
+           std::cout << "From derived default" << std::endl;
        }       
 }; 
 int main ()
