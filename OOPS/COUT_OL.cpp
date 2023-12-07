@@ -1,7 +1,5 @@
 #include <iostream>
 
-using std::cout;
-using std::endl;
 using std::ostream;
 
 class complex
@@ -17,7 +15,7 @@ class complex
         }
         void display ()
         {
-            cout << real << " + i " << img << endl;
+            std::cout << real << " + i " << img << std::endl;
 
         }
         friend complex operator+(complex c1, complex c2);
@@ -28,7 +26,7 @@ int main ()
 { 
     complex c1(5,3),c2(10,5),c3;
     c3 = c1 + c2;
-    cout << c3 << endl;
+    std::cout << c3 << std::endl;
 }
 complex operator+(complex c1, complex c2)
 {
@@ -39,6 +37,6 @@ complex operator+(complex c1, complex c2)
 }
 ostream & operator<<(ostream &out,complex &c)
 {
-    out << c.real << " + i " << c.img << endl;
+    out << c.real << " + i " << c.img << std::endl;
     return out;
 }
