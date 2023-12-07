@@ -1,9 +1,5 @@
 #include <iostream>
 
-using std::cout;
-using std::endl;
-using std::cin;
-
 class complex
 {
     private :
@@ -17,7 +13,7 @@ class complex
         }
         void display()
         {
-            cout << real << " + i " << img << endl;
+            std::cout << real << " + i " << img << std::endl;
         }
         complex operator+(complex c)
         {
