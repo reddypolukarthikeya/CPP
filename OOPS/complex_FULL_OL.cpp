@@ -1,8 +1,5 @@
 #include <iostream>
 
-using std::cout;
-using std::endl;
-using std::cin;
 using std::ostream;
 using std::istream;
 
@@ -46,7 +43,7 @@ complex operator-(complex c1, complex c2)
 }
 ostream & operator<<(ostream &out,complex &c)
 {
-    out << c.real << " + i " << c.img << endl;
+    out << c.real << " + i " << c.img << std::endl;
     return out;
 }
 istream & operator>>(istream &in,complex &c)
@@ -58,8 +55,8 @@ istream & operator>>(istream &in,complex &c)
 int main ()
 { 
     complex c1,c2,c3;
-    cin >> c1 >> c2;
+    std::cin >> c1 >> c2;
     c3 = c1 - c2;
-    cout << c3 << endl;
+    std::cout << c3 << std::endl;
     return 0;
 }
