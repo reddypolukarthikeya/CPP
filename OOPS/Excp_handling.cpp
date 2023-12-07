@@ -1,22 +1,18 @@
 #include <iostream>
 
-using std::cout;
-using std::cin;
-using std::endl;
-
 int main() {
     int x=-1;
-    cout << endl << "Before try";
+    std::cout << std::endl << "Before try";
     try {
-        cout << endl << "Inside try";
+        std::cout << std::endl << "Inside try";
         if (x < 0) {
             throw x;
-            cout << endl << "After throw";
+            std::cout << std::endl << "After throw";
         }
     }
     catch (int x) {
-        cout << endl << "Exception caught";
+        std::cout << std::endl << "Exception caught";
     }
-    cout << endl << "After catch";
+    std::cout << std::endl << "After catch";
     return 0;
 }
