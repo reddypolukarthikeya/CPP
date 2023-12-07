@@ -1,8 +1,5 @@
 #include <iostream>
 
-using std::cout;
-using std::endl;
-
 class rect
 {
     private:
@@ -12,14 +9,14 @@ class rect
         void setLength(int l)
         {
             if (l <= 0)
-               cout<<"Cannot set length..!!"<<endl;
+               std::cout << "Cannot set length..!!" << std::endl;
             else
                length = l;
         }
         void setBreadth(int b)
         {
             if (b <= 0)
-               cout<<"Cannot set breadth..!!"<<endl;
+               std::cout << "Cannot set breadth..!!" << std::endl;
             else 
                breadth = b;
         }
@@ -43,11 +40,11 @@ class rect
         }
         void area()
         {
-            cout<<"AREA = "<<length*breadth<<endl;
+            std::cout << "AREA = " << length*breadth << std::endl;
         }
         void perimeter()
         {
-            cout<<"PERIMETER = "<<2*(length*breadth)<<endl;
+            std::cout << "PERIMETER = " << 2*(length*breadth) << std::endl;
         }
 };
 int main ()
