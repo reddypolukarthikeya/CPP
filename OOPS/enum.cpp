@@ -1,9 +1,5 @@
 #include <iostream>
 
-using std::cout;
-using std::cin;
-using std::endl;
-
 enum days_of_week{Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
 int main()
 {
@@ -11,7 +7,7 @@ int main()
     day1 = Monday;
     day2 = Thursday;
     if (day1 < day2)
-        cout << day1 << endl;
+        std::cout << day1 << std::endl;
     else
-        cout << day2 << endl;
+        std::cout << day2 << std::endl;
 }
